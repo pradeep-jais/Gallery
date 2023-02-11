@@ -74,6 +74,7 @@ class Gallery {
 
   addMainImage(selectedImg) {
     this.modalImgContainer.innerHTML = `<img src="${selectedImg.src}" class="main-img" alt="main-image" title="${selectedImg.title}" />`;
+    this.imgName.textContent = selectedImg.title;
   }
 
   closeModal() {
@@ -101,8 +102,7 @@ class Gallery {
       selected.previousElementSibling || this.modalImages.lastElementChild;
     prev.classList.add('selected');
     selected.classList.remove('selected');
-    this.modalImg.src = prev.src;
-    this.imgName.textContent = prev.title;
+    this.addMainImage(prev);
   }
 
   chooseImage = function (e) {
