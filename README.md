@@ -1,2 +1,3 @@
 # Gallery
-Image Gallery JavaScript OOPs concept
+
+Image Gallery Project : JavaScript OOPs concept
